@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic Page - Massively by HTML5 UP</title>
+		<title>sharon blog test</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,8 +25,10 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html">This is Massively</a></li>
-							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li ><a href="index.html">Index</a></li>
+							<li class="active"><a href="generic.html">Page1</a></li>
+							<li><a href="generic2.html">Page2</a></li>
+							<li><a href="generic3.html">Page3</a></li>
 							<li><a href="elements.html">Elements Reference</a></li>
 						</ul>
 						<ul class="icons">
@@ -43,16 +45,42 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h1>This is a<br />
-									Generic Page</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
+									<span class="date">April 25, 2020</span>
+									<h1>线程同步、线程互斥、线程安全</h1>
+									<p>线程同步是指线程之间的一种制约关系.<br />
+									线程互斥是指对于共享的进程系统资源，在各单个线程访问时的排它性.<br />
+									线程安全指某个函数、函数库在多线程环境中被调用时，能够正确地处理多个线程之间的共享变量，使程序功能正确完成.</p>
 								</header>
 								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
+								<h3>定义描述</h3>
+									<dl>
+										<dt>线程同步</dt>
+										<dd>
+											<p>线程同步是指线程之间的一种制约关系，一个线程的执行依赖另一个线程的消息（当它没有得到另一个线程的消息时应等待，直到消息到达时才被唤醒）.同步就是协同步调，按预定的先后次序进行运行，这里的同步千万不要理解成那个同时进行，应是指协同、协助、互相配合。线程同步是指多线程通过特定的设置（如互斥量，事件对象，临界区）来控制线程之间的执行顺序（即所谓的同步）也可以说是在线程之间通过同步建立起执行顺序的关系，如果没有同步，那线程之间是各自运行各自的。</p>
+										</dd>
+										<dt>线程互斥</dt>
+										<dd>
+											<p>是指对于共享的进程系统资源，在各单个线程访问时的排它性。当有若干个线程都要使用某一共享资源时，任何时刻最多只允许一个线程去使用，其它要使用该资源的线程必须等待，直到占用资源者释放该资源。线程互斥可以看成是一种特殊的线程同步.</p>
+										</dd>
+										<dt>线程安全</dt>
+										<dd>
+											<p>如果你的代码在多线程下执行和在单线程下执行永远都能获得一样的结果，那么你的代码就是线程安全的.</p>
+										</dd>
+									</dl>
+
+
+								<p>线程（进程）之间的制约关系？<br />
+当线程并发执行时，由于资源共享和线程协作，使用线程之间会存在以下两种制约关系。
+（1）间接相互制约。一个系统中的多个线程必然要共享某种系统资源，如共享CPU，共享I/O设备，所谓间接相互制约即源于这种资源共享，打印机就是最好的例子，线程A在使用打印机时，其它线程都要等待。
+（2）直接相互制约。这种制约主要是因为线程之间的合作，如有线程A将计算结果提供给线程B作进一步处理，那么线程B在线程A将数据送达之前都将处于阻塞状态。
+归纳如下：
+1、互斥是指某一资源同时只允许一个访问者对其进行访问，具有唯一性和排它性。但互斥无法限制访问者对资源的访问顺序，即访问是无序的。
+2、同步是指在互斥的基础上（大多数情况），通过其它机制实现访问者对资源的有序访问。
+3、同步其实已经实现了互斥，所以同步是一种更为复杂的互斥。
+4、互斥是一种特殊的同步。
+间接相互制约可以称为互斥，直接相互制约可以称为同步，对于互斥可以这样理解，线程A和线程B互斥访问某个资源则它们之间就会产个顺序问题——要么线程A等待线程B操作完毕，要么线程B等待线程操作完毕，这其实就是线程的同步了。因此同步包括互斥，互斥其实是一种特殊的同步。</p>
+								<p>线程安全又是什么？和上面概念有什么关系？<br />
+所以显然 共享变量的线程安全问题也与线程同步不是一个概念。线程安全侧重点表达在多线程访问情况下，如果结果不会因为执行次数而产生不同，那就算线程安全了，所以想要线程安全可以有局部变量、不可变变量、synchronizeed、volatile、锁等，重点在说变量操作（所有JMM模型解决的就是其中的共享变量在多线程操作下的正确性），只要有多线程共享变量，就需要考虑线程安全的问题。而线程同步，侧重点在说线程之间的制约关系，执行运行的配合顺序。但是如果共享变量的访问逻辑在同步块or互斥的执行环境下，那就可以保证线程安全了，所以线程同步、线程互斥可以是线程安全的手段。.</p>
 							</section>
 
 					</div>

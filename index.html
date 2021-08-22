@@ -6,10 +6,24 @@
 -->
 <html>
 	<head>
-		<title>Massively by HTML5 UP</title>
+		<title>sharon blog test</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type='text/javascript' src='search/js/jquery.swiftype.search.js'></script>
+    <link type='text/css' rel='stylesheet' href='search/css/search.css' media='all' />
+    <script type='text/javascript'>
+      $(function() {
+        $('#st-search-input').swiftypeSearch({
+          resultContainingElement: '#st-results-container',
+          engineKey: 'bxC5S1x1F-TWSZCqeK1z'
+        });
+      });
+    </script>
+
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -20,24 +34,28 @@
 				<!-- Intro -->
 					<div id="intro">
 						<h1>This is<br />
-						Massively</h1>
-						<p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
-						and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p>
+							Index</h1>
+						<p>A free, fully responsive HTML5 + CSS3 site template designed by @aj for <a href="https://html5up.net">HTML5 UP</a><br />
+						and released for free under the Creative Commons license.</p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
+						
 					</div>
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
+						<a href="index.html" class="logo">Index</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">This is Massively</a></li>
-							<li><a href="generic.html">Generic Page</a></li>
+							<li class="active"><a href="index.html">Index</a></li>
+							<li><a href="generic.html">Page1</a></li>
+							<li><a href="generic2.html">Page2</a></li>
+							<li><a href="generic3.html">Page3</a></li>
+							<li><a href="generic4.html">Page4</a></li>
 							<li><a href="elements.html">Elements Reference</a></li>
 						</ul>
 						<ul class="icons">
@@ -50,16 +68,17 @@
 
 				<!-- Main -->
 					<div id="main">
+						<form>
+							Search your site: <input type='text' id='st-search-input' class='st-search-input' />
+						  </form>
+						  <div id="st-results-container" class="st-result-listing"></div>
 
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<span class="date">April 25, 2017</span>
+									<span class="date">April 25, 2020</span>
 									<h2><a href="#">And this is a<br />
 									massive headline</a></h2>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
 								</header>
 								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
 								<ul class="actions special">
@@ -71,24 +90,26 @@
 							<section class="posts">
 								<article>
 									<header>
-										<span class="date">April 24, 2017</span>
-										<h2><a href="#">Sed magna<br />
+										<span class="date">April 24, 2020</span>
+										<h2><a href="#">MongoDB<br />
 										ipsum faucibus</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<p>Mongodb是一个开源的面向文档的数据库，俗称为NoSQL的数据库，用Ç和C ++编写。虽然它本身并不是一个真正的时间序列数据库，但它的创建者通常会将其用于时间序列工作负载。它以时间戳和装桶(bucketing)的形式提供建模原语，使用户能够存储和查询时间序列数据。请注意，除了基于时间序列的工作负载外，本文没有研究InfluxDB对其他工作负载的适用性。InfluxDB不是为了满足文档存储用例而设计的，因此此处将不讨论这些用例。对于这些用例，我们建议使用MongoDB或类似的NoSQL数据库。</p>
 									<ul class="actions special">
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
 								</article>
 								<article>
 									<header>
-										<span class="date">April 22, 2017</span>
-										<h2><a href="#">Primis eget<br />
+										<span class="date">April 22, 2020</span>
+										<h2><a href="#">InfluxDB<br />
 										imperdiet lorem</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<p>InfluxDB是一个Go实现的开源时间序列数据库。它的核心由一个定制化的存储引擎设计而成，称为Time-Structured Merge （TSM）是时序结构合并树，它针对时间序列数据进行了优化。通过一个类似结构化查询风格的查询语言InfluxQL进行控制.InfluxDB为时间跨度下的数学和统计运算提供了一个开箱即用的
+										完美支持，非常适合于定制监控和指标收集，实时分析，以及物联网和传感器数据工作负载。
+										</p>
 									<ul class="actions special">
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
@@ -96,11 +117,11 @@
 								<article>
 									<header>
 										<span class="date">April 18, 2017</span>
-										<h2><a href="#">Ante mattis<br />
+										<h2><a href="#">TiDB<br />
 										interdum dolor</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<p>TiDB 是 PingCAP 公司自主设计、研发的开源分布式关系型数据库，是一款同时支持在线事务处理与在线分析处理 (Hybrid Transactional and Analytical Processing, HTAP) 的融合型分布式数据库产品，具备水平扩容或者缩容、金融级高可用、实时 HTAP、云原生的分布式数据库、兼容 MySQL 5.7 协议和 MySQL 生态等重要特性。目标是为用户提供一站式 OLTP (Online Transactional Processing)、OLAP (Online Analytical Processing)、HTAP 解决方案。TiDB 适合高可用、强一致要求较高、数据规模较大等各种应用场景。</p>
 									<ul class="actions special">
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
@@ -108,11 +129,11 @@
 								<article>
 									<header>
 										<span class="date">April 14, 2017</span>
-										<h2><a href="#">Tempus sed<br />
+										<h2><a href="#">TiKV<br />
 										nulla imperdiet</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<p>TiKV 是一个分布式事务型的键值数据库，提供了满足 ACID 约束的分布式事务接口，并且通过 Raft 协议 保证了多副本数据一致性以及高可用。TiKV 作为 TiDB 的存储层，为用户写入 TiDB 的数据提供了持久化以及读写服务，同时还存储了 TiDB 的统计信息数据。</p>
 									<ul class="actions special">
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
